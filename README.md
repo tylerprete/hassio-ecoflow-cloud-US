@@ -8,6 +8,8 @@ Inspired by [hassio-ecoflow](https://github.com/vwt12eh8/hassio-ecoflow) and [ec
 
 ## Installation
 
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?category=integration&repository=hassio-ecoflow-cloud-US&owner=snell-evan-itt)
+
 - Install as a custom repository via HACS
 - Manually download and extract to the custom_components directory
 
