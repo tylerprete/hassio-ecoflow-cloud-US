@@ -3,21 +3,21 @@
 
 
 
-# EcoFlow Cloud Integration for Home Assistant
-Inspired by [hassio-ecoflow](https://github.com/vwt12eh8/hassio-ecoflow) and [ecoflow-mqtt-prometheus-exporter](https://github.com/berezhinskiy/ecoflow-mqtt-prometheus-exporter) this integration uses EcoFlow MQTT Broker `mqtt.ecoflow.com` to monitor and control the device.
+# EcoFlow Cloud Integration for Home Assistant (en-US)
+Inspired by [hassio-ecoflow](https://github.com/vwt12eh8/hassio-ecoflow),  [ecoflow-mqtt-prometheus-exporter](https://github.com/berezhinskiy/ecoflow-mqtt-prometheus-exporter), and [hassio-ecoflow-cloud](https://github.com/tolwi/hassio-ecoflow-cloud) this integration uses EcoFlow MQTT Broker `mqtt.ecoflow.com` to monitor and control the device. I also updated this repo to run United States API Endpoint for Public API as the reference repo was for European API Endpoint.
 
 ## Installation
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?category=integration&repository=hassio-ecoflow-cloud-US&owner=snell-evan-itt)
 
-- Install as a custom repository via HACS
-- Manually download and extract to the custom_components directory
-
-Once installed, use Add Integration -> Ecoflow Cloud.
+- Click above to install as a custom repository via HACS
+- Restart Home Assistant
+- Once restart is done, use Add Integration -> Ecoflow Cloud.
 
 ## Disclaimers
 
-⚠️ Originally developed for personal use without a goal to cover all available device attributes
+>[!IMPORTANT]
+>Originally developed for personal use without a goal to cover all available device attributes i am updating for my device <b>Delta 2 Max</b>
 
 ## Current state
 <details><summary> DELTA_2 <i>(sensors: 45, switches: 8, sliders: 6, selects: 5)</i> </summary>
@@ -684,6 +684,11 @@ Once installed, use Add Integration -> Ecoflow Cloud.
 - Battery Volts  _(disabled)_
 - Min Cell Volts  _(disabled)_
 - Max Cell Volts  _(disabled)_
+- Solar In Energy
+- Battery Charge Energy from AC
+- Battery Charge Energy from DC
+- Battery Discharge Energy to AC
+- Battery Discharge Energy to DC
 - Battery level SOC  _(auto)_
 - Slave 1 Battery Level  _(auto)_
 - Slave 1 Design Capacity  _(disabled)_
@@ -748,7 +753,7 @@ Once installed, use Add Integration -> Ecoflow Cloud.
 - Solar 1 Watts
 - Solar 1 Input Potential
 - Solar 1 Op Potential
-- Solar 1 Currrent
+- Solar 1 Current
 - Solar 1 Temperature
 - Solar 1 Relay Status
 - Solar 1 Error Code  _(disabled)_
