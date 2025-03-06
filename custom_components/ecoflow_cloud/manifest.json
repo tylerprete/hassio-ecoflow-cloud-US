@@ -10,7 +10,7 @@
   "iot_class": "cloud_push",
   "issue_tracker": "https://github.com/snell-evan-itt/hassio-ecoflow-cloud-US/issues",
   "requirements": [
-    "paho-mqtt==1.6.1",
+    "paho-mqtt>=1.6.1",
     "protobuf>=4.23.0",
     "jsonpath-ng>=1.6.1"
   ],
