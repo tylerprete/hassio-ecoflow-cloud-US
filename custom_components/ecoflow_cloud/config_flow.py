@@ -309,6 +309,7 @@ class EcoflowConfigFlow(ConfigFlow, domain=ECOFLOW_DOMAIN):
 
         if CONF_DEVICE_LIST not in self.new_data:
             self.new_data[CONF_DEVICE_LIST] = {}
+            self.new_options[CONF_DEVICE_LIST] = {}
         if CONF_DEVICE_LIST not in self.new_options:
             self.new_options[CONF_DEVICE_LIST] = {}
 
