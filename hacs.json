@@ -2,5 +2,6 @@
   "name": "ecoflow-cloud",
   "render_readme": true,
   "homeassistant": "2024.11.3",
-  "hide_default_branch": true
+  "hide_default_branch": true,
+  "country": US
 }
