@@ -42,6 +42,7 @@ devices: OrderedDict[str, Type[BaseDevice]] = OrderedDict[str, Type[BaseDevice]]
     "POWERSTREAM": internal_powerstream.PowerStream,
     "GLACIER": internal_glacier.Glacier,
     "WAVE_2": internal_wave2.Wave2,
+    "WAVE_3": internal_wave3.Wave3,
     "DIAGNOSTIC": DiagnosticDevice
 })
 
@@ -54,5 +55,6 @@ device_by_product: OrderedDict[str, Type[BaseDevice]] = OrderedDict[str, Type[Ba
     "RIVER 2 Pro": public_river2_pro.River2Pro,
     "Smart Plug": public_smart_plug.SmartPlug,
     "PowerStream": public_powerstream.PowerStream,
+    "Wave_3": public_wave3.Wave3,
     "Diagnostic": DiagnosticDevice
 })
