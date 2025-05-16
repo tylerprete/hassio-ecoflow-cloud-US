@@ -1,5 +1,5 @@
 from .data_bridge import to_plain
-from ..internal.wave3 import wave3 as Internalwave3
+from ..internal.wave3 import Wave3 as InternalWave3
 from ...api import EcoflowApiClient
 from ...sensor import StatusSensorEntity
 
