@@ -19,6 +19,7 @@ Current integrations details:
 - [POWERSTREAM](devices/POWERSTREAM.md)
 - [GLACIER](devices/GLACIER.md)
 - [WAVE_2](devices/WAVE_2.md)
+- [WAVE_3](devices/WAVE_3.md)
 - [DELTA_2](devices/DELTA_2-Public.md)
 - [DELTA_2_Max](devices/DELTA_2_Max-Public.md)
 - [RIVER_2](devices/RIVER_2-Public.md)
