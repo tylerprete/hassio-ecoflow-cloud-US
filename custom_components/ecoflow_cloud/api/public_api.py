@@ -49,10 +49,10 @@ class EcoflowPublicApiClient(EcoflowApiClient):
                 _LOGGER.warning(f"Skipping device due to missing keys: {device}")
                 continue
             sn = device["sn"]
-            product_name = device["productName"]
-            device_name = device.get("deviceName", f"{product_name}-{sn}")
+            # product_name = device["productName"]
+            device_name = device.get("deviceName")
             status = int(device["online"])
-            result.append(self.__create_device_info(sn, device_name, product_name, status))
+            result.append(self.__create_device_info(sn, device_name, status))
 
         return result
 
