@@ -1,5 +1,5 @@
 [![GitHub Release](https://img.shields.io/github/release/snell-evan-itt/hassio-ecoflow-cloud-US.svg?style=for-the-badge&color=blue)](https://github.com/snell-evan-itt/hassio-ecoflow-cloud-US/releases)
-[![GH-downloads](https://img.shields.io/github/downloads/snell-evan-itt/hassio-ecoflow-cloud-US/total?style=flat-square)](https://github.com/snell-evan-itt/hassio-ecoflow-cloud-US/releases)
+[![GH-downloads]([https://img.shields.io/github/downloads/snell-evan-itt/hassio-ecoflow-cloud-US/total?style=flat-square)](https://github.com/snell-evan-itt/hassio-ecoflow-cloud-US/releases)
 [![HACS Default](https://img.shields.io/badge/HACS-default-blue.svg?style=for-the-badge)](https://hacs.xyz) [![Community forum discussion](https://img.shields.io/badge/COMMUNITY-FORUM-success?style=for-the-badge&color=yellow)](https://community.home-assistant.io/t/custom-component-ecoflow-cloud-api-for-us-users/799962)
 
 
