@@ -8,7 +8,7 @@ on:
 
 jobs:
   release:
-    name: Release the Spook! 👻
+    name: Release EcoFlow-Cloud!
     runs-on: ubuntu-latest
     permissions:
       contents: write
