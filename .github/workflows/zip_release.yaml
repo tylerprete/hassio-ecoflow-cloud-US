@@ -31,7 +31,7 @@ jobs:
         shell: bash
         run: |
           cd "${{ github.workspace }}/custom_components/ecoflow_cloud"
-          zip /ecoflow-cloud.zip -r ./
+          zip ecoflow-cloud.zip -r ./
 
       - name: 🔏 Sign release package
         uses: sigstore/gh-action-sigstore-python@v3.0.0
