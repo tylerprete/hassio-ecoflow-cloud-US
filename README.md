@@ -7,18 +7,18 @@
 # EcoFlow Cloud Integration for Home Assistant (en-US)
 Inspired by [hassio-ecoflow](https://github.com/vwt12eh8/hassio-ecoflow),  [ecoflow-mqtt-prometheus-exporter](https://github.com/berezhinskiy/ecoflow-mqtt-prometheus-exporter), and [hassio-ecoflow-cloud](https://github.com/tolwi/hassio-ecoflow-cloud) this integration uses EcoFlow MQTT Broker `mqtt.ecoflow.com` to monitor and control the device. I also updated this repo to run United States API Endpoint for Public API as the reference repo was for European API Endpoint.
 
-# Request Ecoflow Public API Key for your Account
+## Request Ecoflow Public API Key for your Account
 Link to Official Documentation: https://developer.ecoflow.com/us/document/introduction
 
 Request API Access to Ecoflow United States:
 
--Go to https://developer.ecoflow.com/ 
--Click on "Become a Developer" 
--Login with your Ecoflow username and Password 
--Go back to https://developer.ecoflow.com/ 
--Click on "Become a Developer" 
--Wait until the access is approved by Ecoflow Receive email with subject "Approval notice from EcoFlow Developer Platform". May take some time 
--Go to https://developer.ecoflow.com/us/security and create new AccessKey and SecretKey
+- Go to https://developer.ecoflow.com/ 
+- Click on "Become a Developer" 
+- Login with your Ecoflow username and Password 
+- Go back to https://developer.ecoflow.com/ 
+- Click on "Become a Developer" 
+- Wait until the access is approved by Ecoflow Receive email with subject "Approval notice from EcoFlow Developer Platform". May take some time 
+- Go to https://developer.ecoflow.com/us/security and create new AccessKey and SecretKey
 
 ## Installation
 
