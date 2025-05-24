@@ -59,28 +59,28 @@ class Wave3(BaseDevice):
 
     def numbers(self, client: EcoflowApiClient) -> list[BaseNumberEntity]:
         return [
-            SetTempEntity(client, self, "pd.setTemp", "Set Temperature", 0, 40,
-                          lambda value: {"moduleType": 1, "operateType": "setTemp",
+            SetTempEntity(client, self, "pd.setTempfah", "Set Temperature", 32, 104
+                          lambda value: {"operateType": "setTempfah",
                                          "sn": self.device_info.sn,
-                                         "params": {"setTemp": int(value)}}),
+                                         "params": {"setTempfah": int(value)}}),
         ]
 
     def selects(self, client: EcoflowApiClient) -> list[BaseSelectEntity]:
         return [
             DictSelectEntity(client, self, "pd.fanValue", const.FAN_MODE, const.FAN_MODE_OPTIONS,
-                             lambda value: {"moduleType": 1, "operateType": "fanValue",
+                             lambda value: {"operateType": "fanValue",
                                             "sn": self.device_info.sn,
                                             "params": {"fanValue": value}}),
             DictSelectEntity(client, self, "pd.mainMode", const.MAIN_MODE, const.MAIN_MODE_OPTIONS,
-                             lambda value: {"moduleType": 1, "operateType": "mainMode",
+                             lambda value: {"operateType": "mainMode",
                                             "sn": self.device_info.sn,
                                             "params": {"mainMode": value}}),
             DictSelectEntity(client, self, "pd.powerMode", const.REMOTE_MODE, const.REMOTE_MODE_OPTIONS,
-                             lambda value: {"moduleType": 1, "operateType": "powerMode",
+                             lambda value: {"operateType": "powerMode",
                                             "sn": self.device_info.sn,
                                             "params": {"powerMode": value}}),
             DictSelectEntity(client, self, "pd.subMode", const.POWER_SUB_MODE, const.POWER_SUB_MODE_OPTIONS,
-                             lambda value: {"moduleType": 1, "operateType": "subMode",
+                             lambda value: {"operateType": "subMode",
                                             "sn": self.device_info.sn,
                                             "params": {"subMode": value}}),
         ]
