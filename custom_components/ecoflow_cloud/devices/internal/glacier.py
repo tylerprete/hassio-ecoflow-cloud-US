@@ -58,7 +58,7 @@ class Glacier(BaseDevice):
 
             MiscBinarySensorEntity(client,self,"pd.batFlag", "Battery Present"),
 
-            MiscSensorEntity(client, self, "pd.xt60InState", "XT60 State"),  
+            MiscSensorEntity(client, self, "pd.xt60InState", "XT60 State"),
 
             #Fridge Entities
             FanSensorEntity(client, self, "bms_emsStatus.fanLvl", "Fan Level"),
@@ -66,15 +66,16 @@ class Glacier(BaseDevice):
             DecicelsiusSensorEntity(client, self, "pd.ambientTmp", "Ambient Temperature"),
             DecicelsiusSensorEntity(client, self, "pd.exhaustTmp", "Exhaust Temperature"),
             DecicelsiusSensorEntity(client, self, "pd.tempWater", "Water Temperature"),
-            DecicelsiusSensorEntity(client, self, "pd.tmpL", "Left Temperature"),            
-            DecicelsiusSensorEntity(client, self, "pd.tmpR", "Right Temperature"),            
+            DecicelsiusSensorEntity(client, self, "pd.tmpL", "Left Temperature"),
+            DecicelsiusSensorEntity(client, self, "pd.tmpR", "Right Temperature"),
+            DecicelsiusSensorEntity(client, self, "pd.tmpM", "Combined Temperature"),
 
             MiscBinarySensorEntity(client, self,"pd.flagTwoZone","Dual Zone Mode"),
 
             SecondsRemainSensorEntity(client, self, "pd.iceTm", "Ice Time Remain"),
             LevelSensorEntity(client, self, "pd.icePercent", "Ice Percentage"),
 
-            MiscSensorEntity(client, self, "pd.iceMkMode", "Ice Make Mode"), 
+            MiscSensorEntity(client, self, "pd.iceMkMode", "Ice Make Mode"),
 
             MiscBinarySensorEntity(client, self,"pd.iceAlert","Ice Alert"),
             MiscBinarySensorEntity(client,self, "pd.waterLine","Ice Water Level OK"),
@@ -90,7 +91,7 @@ class Glacier(BaseDevice):
                                                  "params": {"tmpM": int(params.get("pd.tmpMSet", 0)),
                                                             "tmpL": int(value),
                                                             "tmpR": int(params.get("pd.tmpRSet", 0))}}),
-            
+
             SetTempEntity(client, self, "pd.tmpMSet", "Combined Set Temperature",-25, 10,
                                   lambda value, params: {"moduleType": 1, "operateType": "temp",
                                                  "params": {"tmpM": int(value),
@@ -101,7 +102,7 @@ class Glacier(BaseDevice):
                                   lambda value, params: {"moduleType": 1, "operateType": "temp",
                                                  "params": {"tmpM": int(params.get("pd.tmpMSet", 0)),
                                                             "tmpL": int(params.get("pd.tmpLSet", 0)),
-                                                            "tmpR": int(value)}}),                                                                                                                        
+                                                            "tmpR": int(value)}}),
 
         ]
 
@@ -111,22 +112,22 @@ class Glacier(BaseDevice):
                          lambda value: {"moduleType": 1, "operateType": "beepEn", "params": {"flag": value}}),
 
             EnabledEntity(client, self, "pd.coolMode", "Eco Mode",
-                          lambda value: {"moduleType": 1, "operateType": "ecoMode", "params": {"mode": value}}),                         
+                          lambda value: {"moduleType": 1, "operateType": "ecoMode", "params": {"mode": value}}),
 
             #power parameter is inverted for some reason
             EnabledEntity(client, self, "pd.pwrState", "Power",
-                          lambda value: {"moduleType": 1, "operateType": "powerOff", "params": {"enable": value}}),                         
+                          lambda value: {"moduleType": 1, "operateType": "powerOff", "params": {"enable": value}}),
 
         ]
-    
+
     def buttons(self, client: EcoflowApiClient) -> list[BaseButtonEntity]:
         return [
             EnabledButtonEntity(client, self, "smlice", "Make Small Ice", lambda value: {"moduleType": 1, "operateType": "iceMake", "params": {"enable": 1, "iceShape": 0}}),
             EnabledButtonEntity(client, self, "lrgice", "Make Large Ice", lambda value: {"moduleType": 1, "operateType": "iceMake", "params": {"enable": 1, "iceShape": 1}}),
             EnabledButtonEntity(client, self, "deice", "Detach Ice", lambda value: {"moduleType": 1, "operateType": "deIce", "params": {"enable": 1}})
 
-        ]    
-        
+        ]
+
 
     def selects(self, client: EcoflowApiClient) -> list[BaseSelectEntity]:
         return [
