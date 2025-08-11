@@ -68,9 +68,11 @@ class Glacier(BaseDevice):
             DecicelsiusSensorEntity(client, self, "pd.tempWater", "Water Temperature"),
             DecicelsiusSensorEntity(client, self, "pd.tmpL", "Left Temperature"),
             DecicelsiusSensorEntity(client, self, "pd.tmpR", "Right Temperature"),
-            DecicelsiusSensorEntity(client, self, "pd.tmpM", "Combined Temperature"),
+            DecicelsiusSensorEntity(client, self, "pd.tmpAver", "Combined Temperature"),
 
             MiscBinarySensorEntity(client, self,"pd.flagTwoZone","Dual Zone Mode"),
+
+            MiscBinarySensorEntity(client, self, "pd.tmpUnit", "Temperature Unit"),
 
             SecondsRemainSensorEntity(client, self, "pd.iceTm", "Ice Time Remain"),
             LevelSensorEntity(client, self, "pd.icePercent", "Ice Percentage"),
