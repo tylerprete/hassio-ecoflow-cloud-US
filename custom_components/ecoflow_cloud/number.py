@@ -106,4 +106,4 @@ class MaxGenStopLevelEntity(LevelEntity):
 
 
 class SetTempEntity(ValueUpdateEntity):
-    _attr_native_unit_of_measurement = UnitOfTemperature.CELSIUS
+    _attr_native_unit_of_measurement = UnitOfTemperature.FAHRENHEIT
